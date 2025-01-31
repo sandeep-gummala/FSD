@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table{
+            background-color: rgb(190, 247, 233);
+            align-items: center;
+            margin: auto;
+            border:1px solid black;
+            height: 70vh;
+            width: 30vw;
+        }
+        table,tr,td{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            width: 50%;
+            text-align: start;          
+            padding: 20px;
+        }
+        .submit{
+            align-items: center;
+            width: 15vw;
+            display: flex;
+            justify-content: space-evenly;
+            margin:auto;
+            padding: 50px;
+        }
+        button{
+            padding: 10px 20px 10px 20px;
+            border-radius: 4px;
+            font-size: medium;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Regestration Form</h1></center>
+        
+            <table>
+                <tr>
+                    <td><label for="fullname">Full Name:</label></td>
+                    <td><input type="text" id="fullname" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">Date Of Birth</label></td>
+                    <td><input type="date" id="'mail" name="mail" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password" i>Password</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="number">Phone Number:</label></td>
+                    <td><input type="number" id="number" name="number" required></td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td >
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <br>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                        <br>
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <td><label>Skills:</label></td>
+                <td>
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html">HTML</label>
+                    <br>
+                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label>
+                    <br>
+                    <input type="checkbox" id="js" name="skills" value="JavaScript">
+                    <label for="js">JavaScript</label>
+                </td>
+                <tr>
+                    <td><label for="country">Country:</label></td>
+                    <td>
+                        <select name="country" id="country" style="width: 120px; height: 35px;"> 
+                            <option value="" disabled selected>Select Country</option>
+                            <option value="country">USA</option>
+                            <option value="country">Russia</option>
+                            <option value="country">Germany</option>
+                            <option value="country">India</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="about">About You:</label></td>
+                    <td>
+                        <textarea name="about" id="about" cols="25" rows="6"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="submit">
+                <button style="background-color: green;" type="submit">Submit</button>
+                <button style="background-color: red;" type="reset">Reset</button>
+            </div>
+</body>
+</html>
