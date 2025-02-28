@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+    </style>
+  </head>
+  <body class="h-[100vh] w-[100vw] items-center justify-center flex">
+    <div class="h-[80vh] w-[20vw] items-center m-auto flex-col rounded-3xl">
+      <div class="bg-black h-[50%] text-white text-8xl align-bottom" id="display">
+         
+      </div>
+      <div class="bg-black h-[50%] border-t-amber-50 border-t-1 grid grid-cols-4 gap-4 p-6">
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#5d7384] text-white  text-2xl text-center " onclick="display('AC')">AC</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#5d7384] text-white  text-2xl text-center " onclick="display('CLR')">CLR</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#5d7384] text-white  text-2xl text-center " onclick="display('+/-')">+/-</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#5d7384] text-white  text-2xl text-center " onclick="display('/')">/</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('7')">7</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('8')">8</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('9')">9</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('x')">x</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('4')">4</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('5')">5</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('6')">6</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('-')">-</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('1')">1</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('2')">2</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('3')">3</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('+')">+</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('%')">%</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('0')">0</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#3d3d3d] text-white  text-2xl text-center " onclick="display('.')">.</button></div>
+        <div class="flex justify-center items-center"><button type="button" class="h-14 w-16 rounded-[60px] bg-[#72b3cd] text-white  text-2xl text-center " onclick="display('=')">=</button></div>
+    </div>
+
+    
+    </div>
+    
+
+    <script>
+      let calculation="";
+      const res=document.getElementById('display'); 
+      function display(name){
+        if(name=='AC'){ 
+          calculation="";
+          res.innerHTML=calculation;
+        }
+        if(name=='CLR'){ calculation=calculation.substring(0,calculation.length-1);}
+        if(name=='='){
+          res.innerHTML=eval(calculation);
+        }
+        calculation+=name;
+        res.innerHTML=calculation;
+
+      }
+    </script>
+  </body>
+</html>
